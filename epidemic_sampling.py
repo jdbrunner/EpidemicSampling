@@ -79,7 +79,7 @@ elif dyn == "SAIR":
     dynamics = covid_funs.gen_dynamics(end_time,[s0,i0*asympt,i0*(1-asympt),r0],covid_funs.SIR_model_asympt,2,1,[0,3],[R0,R0,asympt,1/timescale,bet/timescale])
 
 #gen_jsons is a helper function that will generate the .json input files for the executible in the correct format
-# This Bias can be given as a function of time, and there
+# This Bias can be given as a function of time
 covid_funs.gen_jsons(fldername,dynamics,Bias,capacities,capacityfun = capacityfun)
 
 total_infected = np.array(dynamics['Symptomatic']) + np.array(dynamics['Asymptomatic'])
