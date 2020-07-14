@@ -5,6 +5,21 @@ Given an epidemic with exact known dynamics as H(t), I1(t), I2(t) representing t
 and infected and symptomatic, this tool simulates daily biased sampling of the epidemic spread using a stochastic model. Sampling is modeled as a 
 Poisson point process, and a test result is drawn from a discrete distribution based on H(t), I1(t), I2(t) and some bias and error in the testing.
 
+This tool requires go, as well as the python libraries:
+numpy
+json
+matplotlib.pyplot
+covid_funs
+importlib
+subprocess
+sys
+shlex
+os
+
+To use, simply git clone this repository. Next use, go build disease_confidence.go to compile the executible. The included Jupyter notebook provides
+a tutorial for using the tool.
+
+
 The main function of the package is an executible named disease_confidence written in GoLang which generates the sample data. This function also provides the option to estimate
 peaks in the simulated data. (may need to be rebuilt with go build disease_confidence.go)
 
